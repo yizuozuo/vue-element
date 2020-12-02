@@ -1,16 +1,13 @@
 {
   "name": "st-web",
   "version": "1.0.0",
-  "description": "smart store",
+  "description": "smart-web",
   "scripts": {
     "mock": "cross-env NODE_ENV=development NODE_MOCK=mock env_config=local node build/dev-server.js",
     "dev": "cross-env NODE_ENV=development env_config=dev node build/dev-server.js",
-    "uat": "cross-env NODE_ENV=development env_config=uat node build/dev-server.js",
     "prd": "cross-env NODE_ENV=development env_config=prd node build/dev-server.js",
     "build": "rimraf dist/prd/* && cross-env NODE_ENV=production env_config=prd node build/build.js",
     "build:dev": "rimraf dist/dev/* && cross-env NODE_ENV=production env_config=dev node build/build.js",
-    "build:uat": "rimraf dist/uat/* && cross-env NODE_ENV=production env_config=uat node build/build.js",
-    "build:stg": "rimraf dist/stg/* && cross-env NODE_ENV=production env_config=stg node build/build.js",
     "build:prd": "rimraf dist/prd/* && cross-env NODE_ENV=production env_config=prd node build/build.js",
     "lint": "eslint --ext .js,.vue src",
     "lint:fix": "eslint --fix --ext .js,.vue src",

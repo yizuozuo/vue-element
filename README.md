@@ -26,9 +26,6 @@ $ npm run mock
 # dev环境构建
 $ npm run build:dev
 
-# uat环境构建
-$ npm run build:uat
-
 # prd环境构建
 $ npm run build:prd
 ```

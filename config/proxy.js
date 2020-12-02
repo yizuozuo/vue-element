@@ -4,7 +4,7 @@ module.exports = {
   proxyList: {
     // '/api/good': {
     //   target: 'http://localhost:7023',
-    //   pathRewrite: {'^/api/good/' : '/goods/'},
+    //   pathRewrite: {'^/api/store/' : '/stores/'},
     //   changeOrigin: true
     // }
     // '/api': {
