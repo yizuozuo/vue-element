@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin scrollBar {
+  &::-webkit-scrollbar-track-piece {
+    background: #d3dce6;
+  }
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #99a9bf;
+    border-radius: 20px;
+  }
+}
+
+@mixin relative {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin pct($pct) {
+  width: #{$pct};
+  position: relative;
+  margin: 0 auto;
+}
+
+@mixin triangle($width, $height, $color, $direction) {
+  $width: $width/2;
+  $color-border-style: $height solid $color;
+  $transparent-border-style: $width solid transparent;
+  height: 0;
+  width: 0;
+  @if $direction==up {
+    border-bottom: $color-border-style;
+    border-left: $transparent-border-style;
+    border-right: $transparent-border-style;
+  }
+  @else if $direction==right {
+    border-left: $color-border-style;
+    border-top: $transparent-border-style;
+    border-bottom: $transparent-border-style;
+  }
+  @else if $direction==down {
+    border-top: $color-border-style;
+    border-left: $transparent-border-style;
+    border-right: $transparent-border-style;
+  }
+  @else if $direction==left {
+    border-right: $color-border-style;
+    border-top: $transparent-border-style;
+    border-bottom: $transparent-border-style;
+  }
+}
+
+// 多行文本益处省略
+@mixin text-clamp($lines: 2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    @content
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+    @content
+  }
+
+  &::-moz-placeholder { /* Firefox 19+ */
+    @content
+  }
+
+  &:-ms-input-placeholder {/* IE 10+ */
+    @content
+  }
+
+  &::-ms-input-placeholder { /* Edge */
+    @content
+  }
+
+  :placeholder-shown { /* Standard one last! */
+    @content
+  }
+}

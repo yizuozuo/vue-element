@@ -1,0 +1,353 @@
+@charset "UTF-8";
+@import './icons.scss';
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+
+body {
+  background-color: #f1f3f4;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+ol, ul, li, dl, dt, dd{
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+
+div:focus{
+  outline: none;
+}
+
+.hide {
+  display: none !important;
+}
+
+.ta-l {
+  text-align: left !important;
+}
+.ta-c {
+  text-align: center !important;
+}
+.ta-r {
+  text-align: right !important;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
+.pl-0 {
+  padding-left: 0px !important;
+}
+
+.pl-5 {
+  padding-left: 5px !important;
+}
+
+.pl-10 {
+  padding-left: 10px !important;
+}
+
+.pl-15 {
+  padding-left: 15px !important;
+}
+
+.pl-20 {
+  padding-left: 20px !important;
+}
+
+.pl-40 {
+  padding-left: 40px !important;
+}
+
+.pr-0{
+  padding-right: 0px !important;
+}
+
+.pr-5 {
+  padding-right: 5px !important;
+}
+
+.pr-10 {
+  padding-right: 10px !important;
+}
+
+.pr-15 {
+  padding-right: 15px !important;
+}
+
+.pr-20 {
+  padding-right: 20px !important;
+}
+
+.pb-5 {
+  padding-bottom: 5px !important;
+}
+
+.pb-10 {
+  padding-bottom: 10px !important;
+}
+
+.pb-15 {
+  padding-bottom: 15px !important;
+}
+
+.pb-20 {
+  padding-bottom: 20px !important;
+}
+
+.pb-30 {
+  padding-bottom: 30px !important;
+}
+
+.pb-40 {
+  padding-bottom: 40px !important;
+}
+
+.pt-5 {
+  padding-top: 5px !important;
+}
+
+.pt-10 {
+  padding-top: 10px !important;
+}
+
+.pt-15 {
+  padding-top: 15px !important;
+}
+
+.pt-20 {
+  padding-top: 20px !important;
+}
+
+.pt-50 {
+  padding-top: 50px !important;
+}
+
+.pt-55 {
+  padding-top: 55px !important;
+}
+
+.pd-5 {
+  padding: 5px !important;
+}
+
+.pd-10 {
+  padding: 10px !important;
+}
+
+.mt-5 {
+  margin-top: 5px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-15 {
+  margin-top: 15px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.ml-5 {
+  margin-left: 5px;
+}
+
+.ml-8 {
+  margin-left: 8px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.mr-5 {
+  margin-left: 5px;
+}
+
+.mr-8 {
+  margin-left: 8px;
+}
+
+.mr-10 {
+  margin-left: 10px;
+}
+
+.box {
+  padding-bottom: 10px;
+}
+
+.box-without-pad {
+  background: #f9f9f9;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
+}
+
+.container-box{
+  background: #fff;
+  padding: 40px;
+}
+
+.block {
+  display: block;
+}
+
+.inlineBlock {
+  display: block;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.underline {
+  border-bottom: 1px solid #ddd;
+}
+
+.clearfix {
+  &:before, &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+//页面全局样式
+.app-main{
+  background: #f1f3f4;
+}
+
+.page-container {
+  padding: 20px 40px 20px 40px;
+  min-width: 768px;
+}
+
+.pagination-container {
+  margin-top: 30px;
+}
+
+.text-center {
+  text-align: center
+}
+
+.sub-navbar {
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  width: 100%;
+  text-align: right;
+  padding-right: 20px;
+  transition: 600ms ease position;
+  background: linear-gradient(90deg, rgba(32, 182, 249, 1) 0%, rgba(32, 182, 249, 1) 0%, rgba(33, 120, 241, 1) 100%, rgba(33, 120, 241, 1) 100%);
+  .subtitle {
+    font-size: 20px;
+    color: #fff;
+  }
+  &.draft {
+    background: #d0d0d0;
+  }
+  &.deleted {
+    background: #d0d0d0;
+  }
+}
+
+.link-type,
+.link-type:focus {
+  color: #337ab7;
+  cursor: pointer;
+  &:hover {
+    color: rgb(32, 160, 255);
+  }
+}
+
+.el-autocomplete-suggestion.inventory-goods-autocomplete {
+  li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .row-cell-good-info {
+    position: relative;
+    .left {
+      width: 60px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .right {
+      margin-left: 65px;
+      overflow: hidden;
+      .name, .barcode {
+        white-space: normal;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        text-align: left;
+        line-height: 16px;
+      }
+
+      .barcode {
+        padding-top: 10px;
+      }
+    }
+  }
+}

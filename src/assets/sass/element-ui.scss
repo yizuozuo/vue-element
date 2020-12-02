@@ -1,0 +1,54 @@
+ //覆盖一些element-ui样式
+.el-radio-group {
+  font-size: 14px;
+}
+
+// .el-input-group {
+//   &__prepend, &__append{
+//     padding: 0 5px;
+//   }
+// }
+
+.el-button [class*=ht-icon-]+span {
+  margin-left: 5px;
+}
+
+.el-table ~ .el-pagination {
+  padding-top: 30px;
+}
+
+.el-pagination {
+  text-align: right;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.el-loading-mask {
+  background-color: rgba(255, 255, 255, 0.2);
+  .el-loading-spinner .circular {
+    background-color: transparent;
+  }
+}
+
+.el-aside, .el-main {
+  overflow: inherit;
+}
+
+.el-form--label-left .el-form-item__label{
+  font-weight: 400;
+  font-style: normal;
+}
+
+.el-form--label-right .el-form-item__label{
+  font-weight: 400;
+  font-style: normal;
+}
+
+.el-dialog__body,
+.el-dialog--center .el-dialog__body{
+  padding: 0 25px 0 25px;
+}
+
+.el-table--enable-row-hover .el-table__body tr:hover>td{
+  background-color: #F9FAFA !important;
+}

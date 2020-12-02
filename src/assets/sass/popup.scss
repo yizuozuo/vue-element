@@ -1,0 +1,23 @@
+@charset "UTF-8";
+@import "./keyframes.scss";
+
+.v-modal-enter {
+  animation: v-modal-in .2s ease;
+}
+
+.v-modal-leave {
+  animation: v-modal-out .2s ease forwards;
+}
+
+.v-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transform: translate(0, 0);
+  opacity: 0.5;
+  background: #000;
+}
