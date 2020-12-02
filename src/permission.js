@@ -19,8 +19,8 @@ function hasPermission(rules = [], permissionRule = '') {
 }
 
 // 白名单
-const whiteList = ['/401', '/404', '/500', '/auth/pass/signin', '/auth/signup', '/auth/pass/forget']
-const loginPath = '/auth/pass/signin'
+const whiteList = ['/401', '/404', '/500', '/auth/signin']
+const loginPath = '/auth/signin'
 
 router.beforeEach((to, from, next) => {
   NProgress.start()

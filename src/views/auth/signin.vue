@@ -1,25 +1,21 @@
 <template>
   <div class="page-signin">
-    <!-- <div class="section is-signup">
-      <router-link :to="{name: 'signup'}">
-        <div class="apply">申请入驻</div>
-      </router-link>
-    </div> -->
-
     <div class="section is-title">
       <span class="title">登录</span>
     </div>
 
     <div class="section is-form">
-      <el-form :model="signInForm" :rules="signInRules" ref="signInForm" class="signin-form">
+      <el-form :model="signInForm"
+        :rules="signInRules"
+        ref="signInForm"
+        class="signin-form">
         <el-form-item prop="user">
           <el-input
             type="text"
             placeholder="请输入手机号码"
             v-model="signInForm.user"
             autocomplete="off"
-            clearable
-          />
+            clearable />
         </el-form-item>
         <el-form-item prop="pass">
           <el-input
@@ -28,15 +24,19 @@
             v-model="signInForm.pass"
             autocomplete="off"
             clearable
-            show-password
-          />
+            show-password />
         </el-form-item>
         <el-form-item class="bar">
           <el-col :span="12">
-            <el-checkbox v-model="isRemberMe">记住用户名</el-checkbox>
+            <el-checkbox v-model="isRemberMe">
+              记住用户名
+            </el-checkbox>
           </el-col>
-          <el-col :span="12" class="ta-r">
-            <router-link :to="{name: 'forget'}">忘记密码</router-link>
+          <el-col :span="12"
+            class="ta-r">
+            <router-link :to="{name: 'forget'}">
+              忘记密码
+            </router-link>
           </el-col>
         </el-form-item>
         <el-form-item>
@@ -44,8 +44,9 @@
             type="primary"
             :loading="isLogining"
             :disabled="isLogining"
-            @click="submitForm('signInForm')"
-          >登录</el-button>
+            @click="submitForm('signInForm')">
+            登录
+          </el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -79,7 +80,6 @@ export default {
         callback()
       }
     }
-
     return {
       signInForm: {
         user: '',

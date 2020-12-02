@@ -7,45 +7,45 @@ import SkeletonLayout from '@/views/layout/skeleton'
 
 Vue.use(Router)
 
-export const constantRouterMap = [{
+export const constantRouterMap = [
+  {
   path: '/401',
   name: '401',
   component: () => import('@/views/error/401'),
   hidden: true
-}, {
-  path: '/404',
-  name: '404',
-  component: () => import('@/views/error/404'),
-  hidden: true
-}, {
-  path: '/500',
-  name: '500',
-  component: () => import('@/views/error/500'),
-  hidden: true
-}, {
-  path: '/auth',
-  name: 'auth',
-  component: Layout,
-  hidden: true,
-  children: [{
-    path: 'signin',
-    component: () => import('@/views/auth/signin'),
-    name: 'signin',
-    props: true,
-    meta: { title: 'signin' }
-  }]
-}, {
-  path: '/',
-  component: Layout,
-  redirect: 'dashboard',
-  meta: { title: 'dashboard', icon: 'ht-icon-home' },
-  children: [{
-    path: 'dashboard',
-    component: () => import('@/views/dashboard/index'),
-    name: 'dashboard',
-    meta: { title: 'dashboard', rule: 'dashboard' }
-  }]
-}]
+  }, {
+    path: '/404',
+    name: '404',
+    component: () => import('@/views/error/404'),
+    hidden: true
+  }, {
+    path: '/500',
+    name: '500',
+    component: () => import('@/views/error/500'),
+    hidden: true
+  }, {
+    path: '/auth',
+    name: 'auth',
+    component: Layout,
+    children: [{
+      path: 'signin',
+      component: () => import('@/views/auth/signin'),
+      name: 'signin',
+      meta: { title: 'signin' }
+    }]
+  }, {
+    path: '/',
+    component: Layout,
+    redirect: 'dashboard',
+    meta: { title: 'dashboard', icon: 'ht-icon-home' },
+    children: [{
+      path: 'dashboard',
+      component: () => import('@/views/dashboard/index'),
+      name: 'dashboard',
+      meta: { title: 'dashboard', rule: 'dashboard' }
+    }]
+  }
+]
 
 export default new Router({
   mode: 'history', // require service support
