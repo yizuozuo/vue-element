@@ -1,5 +1,5 @@
 <template>
-  <div class="sign-layout">
+  <div class="page-container">
     <div class="left">
       <div class="wellcome">
         Welcome
@@ -17,18 +17,6 @@ export default {
   name: 'sign-layout',
 }
 </script>
-
-<style lang="scss">
-.is-mobile .sign-layout {
-  .left {
-    display: none;
-  }
-
-  .right {
-    width: 100% !important;
-  }
-}
-</style>
 
 <style lang="scss" scoped>
 .sign-layout {

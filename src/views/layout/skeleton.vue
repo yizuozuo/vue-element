@@ -2,7 +2,7 @@
   <div class="app-wapper" :class="classObj">
     <div class="section is-header">
       <div class="header">
-        <img class="logo" src="@/assets/img/500.png" />
+        <img class="logo" src="@/assets/img/head.jpg" />
         <span class="desc">
           智能-后台管理系统
         </span>
@@ -12,7 +12,7 @@
       <router-view />
     </div>
     <div class="section is-footer">
-      <span> Copyright © 2018 - {{ currentYear }} 汉堂智慧 </span>
+      <span> Copyright © 2018 - {{ currentYear }} 智能 </span>
     </div>
   </div>
 </template>

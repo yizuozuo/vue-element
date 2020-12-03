@@ -50,7 +50,7 @@ export default {
         totalNum: () => r.integer(100, 1000),
         timestamp: () => r.now(),
         'result|10': [{
-          address: '东方路950号一百杉杉大厦16楼J-L室',
+          address: '16楼J-L室',
           adminLinkedPhone: () => r.pick([
             '13066528188',
             '18647286432',

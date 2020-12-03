@@ -17,7 +17,7 @@
           <img
             alt="暂无图片"
             class="user-avatar"
-            src="@/assets/img/avatar.png">
+            src="@/assets/img/head.jpg">
           <span
             class="username"
             v-text="nickname" />

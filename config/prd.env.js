@@ -8,5 +8,5 @@ module.exports = {
     sys: '"//api.mhtml.club/sys"',
     common: '"//api.mhtml.club/common"'
   },
-  IMG_SERVER_URLS: '"https://img01.html.info,https://img02.html.info"'
+  IMG_SERVER_URLS: '"https://img01.minhui.info,https://img02.minhui.info"'
 }

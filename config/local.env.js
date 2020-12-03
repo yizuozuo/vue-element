@@ -11,5 +11,5 @@ module.exports = merge(prodEnv, {
     sys: '"/api/sys"',
     common: '"/api/common"'
   },
-  IMG_SERVER_URLS: '"https://img01.html.info,https://img02.html.info"'
+  IMG_SERVER_URLS: '"https://img01.minhui.info,https://img02.minhui.info"'
 })

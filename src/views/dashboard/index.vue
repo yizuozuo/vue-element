@@ -46,7 +46,7 @@
       </el-form>
     </div>
 
-    <div
+    <!-- <div
       class="section is-checklist"
       v-loading="isLoading">
       <div class="section-tip">
@@ -78,7 +78,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 

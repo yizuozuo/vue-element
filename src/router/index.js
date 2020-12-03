@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Layout from '@/views/layout/index'
-import EmptyLayout from '@/views/layout/empty'
+// import EmptyLayout from '@/views/layout/empty'
 import SignLayout from '@/views/layout/sign'
-import SkeletonLayout from '@/views/layout/skeleton'
+// import SkeletonLayout from '@/views/layout/skeleton'
 
 Vue.use(Router)
 
@@ -26,17 +26,32 @@ export const constantRouterMap = [
   }, {
     path: '/auth',
     name: 'auth',
-    component: Layout,
+    // component: SkeletonLayout,
+    // hidden: true,
+    // children: [{
+    //   path: '/path',
+    //   component: SignLayout,
+    //   children: [{
+    //     path: 'signin',
+    //     component: () => import('@/views/auth/signin'),
+    //     name: 'signin',
+    //     props: true,
+    //     meta: { title: 'signin' }
+    //   }]
+    // }]
+    component: SignLayout,
+    hidden: true,
     children: [{
       path: 'signin',
       component: () => import('@/views/auth/signin'),
       name: 'signin',
+      props: true,
       meta: { title: 'signin' }
     }]
   }, {
     path: '/',
     component: Layout,
-    redirect: 'dashboard',
+    redirect: '/dashboard',
     meta: { title: 'dashboard', icon: 'ht-icon-home' },
     children: [{
       path: 'dashboard',

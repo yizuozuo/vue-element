@@ -6,9 +6,9 @@ module.exports = merge(prodEnv, {
   NODE_ENV: '"production"',
   ENV_CONFIG: '"dev"',
   URLS: {
-    store: '"//api.html.info/store"',
-    sys: '"//api.html.info/sys"',
-    common: '"//api.html.info/common"',
+    store: '"//api.minhui.info/store"',
+    sys: '"//api.minhui.info/sys"',
+    common: '"//api.minhui.info/common"',
   },
-  IMG_SERVER_URLS: '"https://img01.html.info,https://img02.html.info"'
+  IMG_SERVER_URLS: '"https://img01.minhui.info,https://img02.minhui.info"'
 })
