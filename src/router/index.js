@@ -9,10 +9,10 @@ Vue.use(Router)
 
 export const constantRouterMap = [
   {
-  path: '/401',
-  name: '401',
-  component: () => import('@/views/error/401'),
-  hidden: true
+    path: '/401',
+    name: '401',
+    component: () => import('@/views/error/401'),
+    hidden: true
   }, {
     path: '/404',
     name: '404',
@@ -100,6 +100,23 @@ export const asyncRouterMap = [
       props: true,
       component: () => import('@/views/store/detail'),
       meta: { title: 'storeDetail', rule: 'store-detail' }
+    }]
+  }, {
+    path: '/user',
+    component: Layout,
+    redirect: 'noredirect',
+    name: 'user',
+    meta: { title: 'user', icon: 'ht-icon-gear', rule: 'user' },
+    children: [{
+      path: 'info',
+      name: 'userInfo',
+      component: () => import('@/views/user/info'),
+      meta: { title: 'userInfo', rule: 'user-info' }
+    }, {
+      path: 'pass',
+      name: 'userPass',
+      component: () => import('@/views/user/pass'),
+      meta: { title: 'userPass', rule: 'user-password' }
     }]
   }, {
     path: '*',
