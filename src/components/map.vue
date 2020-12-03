@@ -16,8 +16,8 @@ export default {
       type: Object,
       default: () => {
         return { 
-          lng: '121.548641',
-          lat: '31.221277' 
+          lng: '113.572379',
+          lat: '34.832019' 
         }
       }
     },

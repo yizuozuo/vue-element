@@ -298,7 +298,7 @@ export default {
         border-radius: 0;
         text-align: right;
         font-size: 14px;
-        color: #32B4C8;
+        color: seagreen;
 
         .line {
           margin-right: 15px;

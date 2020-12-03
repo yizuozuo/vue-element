@@ -99,7 +99,7 @@ export default {
 <style lang="scss" scoped>
 .ibtn{
   font-size: 16px;
-  color: #32B5CB;
+  color: seagreen;
   padding-left: 12px;
   padding-top: 20px;
 }

@@ -317,8 +317,8 @@ export default {
 .store-list{
   .el-button.is-plain:hover, .el-button.is-plain:focus {
     background: none;
-    color: #4367D1;
-    border: 1px solid #4367D1;
+    color: seagreen;
+    border: 1px solid seagreen;
   }
 
   .el-table--enable-row-hover .el-table__body tr:hover>td{
@@ -362,7 +362,7 @@ export default {
   }
 
   .seaBtn{
-    background: #32B4C8;
+    background: seagreen;
       .txt{
         color: #fff;
       }
@@ -370,22 +370,22 @@ export default {
 
   .cbtn {
     font-size: 14px;
-    color: #4367D1;
+    color: seagreen;
     float: right;
-    border: 1px solid #4367D1;
+    border: 1px solid seagreen;
     border-radius: 14px;
     padding: 4px 14px;
     margin-top: 10px;
   }
 
   // .bicon {
-  //   background: #32B4C8;
+  //   background: seagreen;
   //   color: #fff
   // }
 
   .btn{
     font-size: 16px;
-    color: #32B4C8;
+    color: seagreen;
     float: right;
   }
 

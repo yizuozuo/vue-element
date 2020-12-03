@@ -316,7 +316,7 @@ export default {
 
   .el-form-item {
     &.is-success .el-upload{
-      border-color: #32b4c8
+      border-color: seagreen
     }
   }
 }

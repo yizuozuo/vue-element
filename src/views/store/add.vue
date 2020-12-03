@@ -179,7 +179,7 @@
               采用品牌资质
             </el-radio>
             <el-radio :label="2">
-              创建网点资质
+              创建门店资质
             </el-radio>
           </el-radio-group>
         </el-form-item>
@@ -609,7 +609,7 @@ export default {
 
   .el-form-item {
     &.is-success .el-upload{
-      border-color: #32b4c8
+      border-color: seagreen
     }
   }
 }

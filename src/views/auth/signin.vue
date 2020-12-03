@@ -217,7 +217,7 @@ export default {
 
       .title {
         padding-bottom: 5px;
-        border-bottom: 2px solid #32b4cb;
+        border-bottom: 2px solid seagreen;
       }
     }
 

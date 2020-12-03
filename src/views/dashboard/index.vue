@@ -157,7 +157,7 @@ export default {
       }, {
         name: '订单数', icon: 'ht-icon-indent', value: 0, color: '#FF9A3C', loading: true
       }, {
-        name: '近期消耗积分数', icon: 'ht-icon-coin', value: 0, color: '#4367D1', loading: true
+        name: '近期消耗积分数', icon: 'ht-icon-coin', value: 0, color: 'seagreen', loading: true
       }],
       checks:[ {
         name: '页面设置',
@@ -338,7 +338,7 @@ export default {
             }
 
             .finished-icon {
-              color: #32b4c8;
+              color: seagreen;
               font-size: 20px;
               background-color: transparent;
             }

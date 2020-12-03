@@ -44,7 +44,7 @@ export default {
     },
     color: {
       type: String,
-      default: '#32B4C8'
+      default: 'seagreen'
     }
   },
   computed: {

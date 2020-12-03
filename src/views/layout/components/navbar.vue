@@ -143,7 +143,7 @@ export default {
       padding-left: 10px;
       padding-right: 40px;
       i {
-        color: #32B4C8;
+        color: seagreen;
         font-size: 15px;
         line-height: 50px;
         padding-right: 5px;
