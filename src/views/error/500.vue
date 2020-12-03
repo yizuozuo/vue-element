@@ -38,7 +38,7 @@ export default {
     padding: 0;
     margin: 0;
     height: calc(100vh + 0px);
-    background:url(../../assets/img/500.png) no-repeat center bottom;
+    background:url(../../assets/img/500.jpg) no-repeat center bottom;
     background-size: 75%;
   }
 

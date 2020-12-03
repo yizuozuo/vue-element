@@ -46,7 +46,7 @@
       </el-form>
     </div>
 
-    <!-- <div
+    <div
       class="section is-checklist"
       v-loading="isLoading">
       <div class="section-tip">
@@ -64,7 +64,7 @@
               {{ item.tip }}
             </div>
           </div>
-          <div class="righter">
+          <!-- <div class="righter">
             <i v-if="item.finished"
               class="finished-icon el-icon-success" />
             <router-link class="todo-link"
@@ -75,10 +75,10 @@
                 去完成
               </el-button>
             </router-link>
-          </div>
+          </div> -->
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -159,19 +159,7 @@ export default {
       }, {
         name: '近期消耗积分数', icon: 'ht-icon-coin', value: 0, color: '#4367D1', loading: true
       }],
-      checks:[{
-        name: '小程序授权',
-        tip: '请将您品牌的小程序在本平台授权。',
-        route: 'authorizeWechatMini',
-        finished: null,
-        loading: true,
-      }, {
-        name: '公众号授权',
-        tip: '请将您品牌的公众号在本平台授权。',
-        route: 'authorizeWechatApp',
-        finished: null,
-        loading: true
-      }, {
+      checks:[ {
         name: '页面设置',
         tip: '请将您品牌的小程序做个人化设置。',
         route: 'fitmentMpPage',
@@ -187,18 +175,6 @@ export default {
         name: '会员卡设置',
         tip: '请先设置您品牌的会员卡的基本信息。',
         route: 'couponSetUp',
-        finished: null,
-        loading: true
-      }, {
-        name: '会员等级',
-        tip: '请先设置您品牌中最高的会员等级',
-        route: 'memberGradeList',
-        finished: null,
-        loading: true
-      }, {
-        name: '会员权益',
-        tip: '请您设置您品牌所能享受的会员权益。',
-        route: 'rightsConfig',
         finished: null,
         loading: true
       }]
@@ -257,13 +233,9 @@ export default {
         this.isLoading = false
         if(res.success) {
           const v = res.entity
-          this.checks[0].finished = v.mpAuthorization,
-          this.checks[1].finished = v.gzhAuthorization,
-          this.checks[2].finished = v.pageSetting,
-          this.checks[3].finished = v.integralRule,
-          this.checks[4].finished = v.vipCardSetting,
-          this.checks[5].finished = v.memberLevel,
-          this.checks[6].finished = v.memberRight
+          this.checks[0].finished = v.pageSetting,
+          this.checks[1].finished = v.integralRule,
+          this.checks[2].finished = v.vipCardSetting
         }
       })
         .catch(err=>{
@@ -289,7 +261,7 @@ export default {
     } else {
       this.loadStore()
     }
-    this.loadStatisticData()
+    // this.loadStatisticData()
     this.loadStasicCheck()
   }
 

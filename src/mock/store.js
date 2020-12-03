@@ -3,10 +3,10 @@ import { normalize } from 'uri-js';
 const r = Mock.Random
 
 const pics = [
-  'https://img13.360buyimg.com/n1/jfs/t20920/169/506470705/144232/9ff0b2c6/5b0f9d0fN44d935f9.jpg',
-  'https://img12.360buyimg.com/babel/s130x130_jfs/t20161/53/1761196340/142282/90412c40/5b3481aeNb835cfb6.jpg',
+  'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2853553659,1775735885&fm=26&gp=0.jpg',
+  'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1108455085,3503443385&fm=26&gp=0.jpg',
   'https://img12.360buyimg.com/mobilecms/s100x100_jfs/t3700/102/1246725028/488785/298dbe63/58213688Ne6be373a.jpg',
-  'https://img11.360buyimg.com/babel/s130x130_jfs/t3298/290/6814316242/159274/459ba277/58abf752Nf4e7e811.jpg',
+  'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3001884651,1229479384&fm=26&gp=0.jpg',
   'https://img12.360buyimg.com/babel/s130x130_jfs/t7447/356/4184422946/94012/aff04eb/59ffbad0N666f7575.jpg',
   'https://img12.360buyimg.com/babel/s130x130_jfs/t1/259/22/10882/182432/5bcb5fc6E28b82984/fa2982e5dff4361a.jpg',
   'https://img12.360buyimg.com/babel/s130x130_jfs/t21520/21/991196653/158823/83e616a1/5b1de2a0N4dad6264.jpg',
@@ -15,7 +15,7 @@ const pics = [
 
 const icon = [
   'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1969934853,684704989&fm=200&gp=0.jpg',
-  'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=576324395,1770998026&fm=200&gp=0.jpg',
+  'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1108455085,3503443385&fm=26&gp=0.jpg',
   'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=172676125,3542759869&fm=15&gp=0.jpg',
   'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2270942935,2042557183&fm=15&gp=0.jpg',
   'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2522637171,1261279167&fm=15&gp=0.jpg',
@@ -50,7 +50,7 @@ export default {
         totalNum: () => r.integer(100, 1000),
         timestamp: () => r.now(),
         'result|10': [{
-          address: '16楼J-L室',
+          address:() => r.pick(['郑州高新区', '开封鼓楼区', '郑州金水区']),
           adminLinkedPhone: () => r.pick([
             '13066528188',
             '18647286432',

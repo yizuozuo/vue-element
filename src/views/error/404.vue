@@ -96,7 +96,7 @@ export default {
   }
 
   .pic {
-    background: url('../../assets/img/500.png') no-repeat;
+    background: url('../../assets/img/500.jpg') no-repeat;
     background-size: 100%;
     width: 440px;
     height: 440px;

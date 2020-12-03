@@ -1,6 +1,6 @@
 import { isEmpty, isArray } from '@/utils'
 import { getBrandDetail } from '@/api/store'
-import { loginIn, loginOut, enterApply, updateUserInfo } from '@/api/sys'
+import { loginIn, loginOut, updateUserInfo } from '@/api/sys'
 import { ROLE_BRAND, ROLE_STORE, ROLE_STUFF } from '@/utils/const'
 import {
   getRules,
@@ -166,69 +166,69 @@ const user = {
     },
 
     // 申请入驻
-    ApplyEnter({ dispatch, commit }, data = {}) {
-      return new Promise((resolve, reject) => {
-        enterApply(data)
-          .then(res => {
-            if (res.success && res.entity) {
-              const { id, headImg, nickName, code, storeId, realName, token, userName, sysMenuList } = res.entity
-              let menus = sysMenuList || []
+    // ApplyEnter({ dispatch, commit }, data = {}) {
+    //   return new Promise((resolve, reject) => {
+    //     enterApply(data)
+    //       .then(res => {
+    //         if (res.success && res.entity) {
+    //           const { id, headImg, nickName, code, storeId, realName, token, userName, sysMenuList } = res.entity
+    //           let menus = sysMenuList || []
 
-              if (isArray(menus) && menus.length > 0) {
-                let rules = calcMenus(menus)
+    //           if (isArray(menus) && menus.length > 0) {
+    //             let rules = calcMenus(menus)
 
-                if (code === ROLE_BRAND) {
-                  rules.push('user-role-brand')
-                }
+    //             if (code === ROLE_BRAND) {
+    //               rules.push('user-role-brand')
+    //             }
 
-                if (code === ROLE_STORE) {
-                  rules.push('user-role-store')
-                }
+    //             if (code === ROLE_STORE) {
+    //               rules.push('user-role-store')
+    //             }
 
-                if (code === ROLE_STUFF) {
-                  rules.push('user-role-stuff')
-                }
+    //             if (code === ROLE_STUFF) {
+    //               rules.push('user-role-stuff')
+    //             }
 
-                commit('SET_ROLES', rules)
-                setRules(rules)
-              } else {
-                return reject(new Error('无权限'))
-              }
+    //             commit('SET_ROLES', rules)
+    //             setRules(rules)
+    //           } else {
+    //             return reject(new Error('无权限'))
+    //           }
 
-              commit('SET_USER_ID', id)
-              commit('SET_STORE_ID', storeId)
-              commit('SET_AVATAR', headImg)
-              commit('SET_NICK_NAME', nickName)
-              commit('SET_REAL_NAME', realName)
-              commit('SET_TOKEN', token)
-              commit('SET_USER_NAME', userName)
-              commit('SET_USER_ROLE', code)
+    //           commit('SET_USER_ID', id)
+    //           commit('SET_STORE_ID', storeId)
+    //           commit('SET_AVATAR', headImg)
+    //           commit('SET_NICK_NAME', nickName)
+    //           commit('SET_REAL_NAME', realName)
+    //           commit('SET_TOKEN', token)
+    //           commit('SET_USER_NAME', userName)
+    //           commit('SET_USER_ROLE', code)
 
-              setUserId(id)
-              setStoreId(storeId)
-              setAvatar(headImg)
-              setNickName(nickName)
-              setRealName(realName)
-              setToken(token)
-              setUserName(userName)
-              setUserRole(code)
+    //           setUserId(id)
+    //           setStoreId(storeId)
+    //           setAvatar(headImg)
+    //           setNickName(nickName)
+    //           setRealName(realName)
+    //           setToken(token)
+    //           setUserName(userName)
+    //           setUserRole(code)
 
-              dispatch('LoadBrandInfo')
-                .then(() => {
-                  resolve()
-                })
-                .catch(err => {
-                  reject(new Error(err.message || '加载品牌信息失败'))
-                })
-            } else {
-              reject(new Error(res.message))
-            }
-          })
-          .catch(err => {
-            reject(err)
-          })
-      })
-    },
+    //           dispatch('LoadBrandInfo')
+    //             .then(() => {
+    //               resolve()
+    //             })
+    //             .catch(err => {
+    //               reject(new Error(err.message || '加载品牌信息失败'))
+    //             })
+    //         } else {
+    //           reject(new Error(res.message))
+    //         }
+    //       })
+    //       .catch(err => {
+    //         reject(err)
+    //       })
+    //   })
+    // },
 
     LoadBrandInfo({ commit }) {
       return new Promise( resolve => {

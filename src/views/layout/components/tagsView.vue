@@ -72,6 +72,8 @@ export default {
     generateTitle, // generateTitle by vue-i18n
     generateRoute() {
       if (this.$route.name) {
+        // console.log(this.$route.name+'{}')
+        // console.log(this.$route)
         return this.$route
       }
       return false

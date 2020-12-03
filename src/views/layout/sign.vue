@@ -39,14 +39,15 @@ export default {
   .left {
     width: 580px;
     min-height: 520px;
-    background-image: url(../../assets/img/500.png);
+    background-image: url(../../assets/img/500.jpg);
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
 
     .wellcome {
       font-size: 48px;
-      color: #555555;
+      // color: #555555;
+      color: darkgreen;
       // padding-left: 118px;
       text-align: center;
       padding-top: 60px;

@@ -5,6 +5,7 @@ const tagsView = {
   },
   mutations: {
     ADD_VISITED_VIEWS: (state, view) => {
+      console.log(view)
       if (state.visitedViews.some(v => v.path === view.path)) {
         return
       }
@@ -52,6 +53,7 @@ const tagsView = {
   },
   actions: {
     addVisitedViews({ commit }, view) {
+      alert('11')
       commit('ADD_VISITED_VIEWS', view)
     },
     delVisitedViews({ commit, state }, view) {

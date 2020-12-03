@@ -24,9 +24,7 @@
     </div>
     <div class="main-container">
       <navbar class="navbar" />
-      <!--
-      <tags-view />
-      -->
+      <!-- <tags-view /> -->
       <app-main />
     </div>
   </div>
@@ -34,7 +32,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { Navbar, Sidebar, AppMain, /* TagsView */ } from './components'
+import { Navbar, Sidebar, AppMain, /*TagsView */} from './components'
 import CustomImage from '@/components/common/image'
 import ResizeMixin from './mixin/resizeHandler'
 
@@ -44,7 +42,7 @@ export default {
     Navbar,
     Sidebar,
     AppMain,
-    CustomImage
+    CustomImage,
     // TagsView
   },
   mixins: [ResizeMixin],
@@ -56,7 +54,9 @@ export default {
       'sidebar',
       'device'
     ]),
-
+    // cachedViews() {
+    //   return this.$store.state.tagsView.cachedViews
+    // },
     // sidebar() {
     //   return this.$store.state.app.sidebar
     // },
