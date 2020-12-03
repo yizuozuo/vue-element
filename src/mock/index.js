@@ -1,6 +1,7 @@
 import Mock from 'mockjs'
 import storeAPI from './store'
 import sysAPI from './sys'
+import messageAPI from './message'
 import commonAPI from './common'
 
 Mock.setup({
@@ -59,7 +60,8 @@ Mock.mock(/\/api\/store\/store\/rights\/base\/modify/, 'put', storeAPI.updateBas
 Mock.mock(/\/api\/store\/store\/rights\/\d+\/modify/, 'put', storeAPI.updateBuildRights)
 Mock.mock(/\/api\/store\/store\/brand\/others\/list/, 'post', storeAPI.getThreeBrand)
 Mock.mock(/\/api\/store\/store\/brand\/subscribe\/configs/, 'get', storeAPI.getBrandServices)
-
+// 消息
+Mock.mock(/\/api\/message\/sms\/send/, 'post', messageAPI.getSmsCode)
 // 鉴权
 Mock.mock(/\/api\/sys\/login\/login/, 'post', sysAPI.loginIn)
 Mock.mock(/\/api\/sys\/login\/quit/, 'post', sysAPI.loginOut)
